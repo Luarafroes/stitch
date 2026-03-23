@@ -1,341 +1,355 @@
 <!DOCTYPE html>
 
-<html class="dark" lang="en"><head>
+<html class="light" lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800;900&amp;family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<title>Vinyl Archive | Your Pop &amp; K-Pop Record Haven</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;700;800;900&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Icons -->
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind -->
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "inverse-primary": "#134af1",
-                        "tertiary-container": "#f790e0",
-                        "surface-variant": "#262627",
-                        "on-primary-fixed-variant": "#00207e",
-                        "inverse-on-surface": "#565556",
-                        "secondary-fixed": "#ffc1ce",
-                        "on-secondary-fixed-variant": "#a1004b",
-                        "outline-variant": "#484849",
-                        "on-surface": "#ffffff",
-                        "surface-container-high": "#201f21",
-                        "on-background": "#ffffff",
-                        "tertiary": "#ffa3e9",
-                        "on-surface-variant": "#adaaab",
-                        "secondary-dim": "#e4006c",
-                        "surface-bright": "#2c2c2d",
-                        "tertiary-fixed": "#f790e0",
-                        "on-secondary-fixed": "#6d0030",
-                        "primary-container": "#859aff",
-                        "secondary": "#ff6b98",
-                        "on-secondary-container": "#fff5f6",
-                        "on-secondary": "#47001d",
-                        "surface-container-highest": "#262627",
-                        "on-primary-container": "#001867",
-                        "on-tertiary-container": "#5f0656",
-                        "on-primary": "#002283",
-                        "inverse-surface": "#fcf8f9",
-                        "background": "#0e0e0f",
-                        "error": "#ff6e84",
-                        "on-tertiary-fixed": "#380033",
-                        "primary-fixed": "#859aff",
-                        "secondary-container": "#bb0058",
-                        "primary-fixed-dim": "#718bff",
-                        "on-error-container": "#ffb2b9",
-                        "surface-container": "#19191b",
-                        "surface-tint": "#97a9ff",
-                        "on-tertiary-fixed-variant": "#6a1460",
-                        "surface-dim": "#0e0e0f",
-                        "on-tertiary": "#6c1561",
-                        "surface-container-low": "#131314",
-                        "error-container": "#a70138",
-                        "primary-dim": "#3e65ff",
-                        "tertiary-dim": "#e883d2",
-                        "on-error": "#490013",
-                        "error-dim": "#d73357",
-                        "surface": "#0e0e0f",
-                        "secondary-fixed-dim": "#ffadc0",
-                        "surface-container-lowest": "#000000",
-                        "primary": "#97a9ff",
-                        "tertiary-fixed-dim": "#e883d2",
-                        "outline": "#767576",
-                        "on-primary-fixed": "#000000"
-                    },
-                    fontFamily: {
-                        "headline": ["Space Grotesk"],
-                        "body": ["Manrope"],
-                        "label": ["Manrope"]
-                    },
-                    borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
-                },
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface": "#f5f6f7",
+              "inverse-surface": "#0c0f10",
+              "on-surface-variant": "#595c5d",
+              "error-dim": "#a70138",
+              "on-surface": "#2c2f30",
+              "surface-container-lowest": "#ffffff",
+              "on-error-container": "#510017",
+              "secondary-dim": "#005a4d",
+              "tertiary-container": "#f4db36",
+              "surface-container-high": "#e0e3e4",
+              "surface-container-low": "#eff1f2",
+              "surface-container": "#e6e8ea",
+              "on-secondary-container": "#005d4f",
+              "on-primary-fixed-variant": "#63003f",
+              "surface-bright": "#f5f6f7",
+              "tertiary-fixed": "#f4db36",
+              "on-primary-fixed": "#15000a",
+              "surface-variant": "#dadddf",
+              "tertiary": "#685c00",
+              "primary-fixed": "#f97bba",
+              "primary": "#9e316d",
+              "primary-dim": "#8f2461",
+              "on-tertiary-fixed-variant": "#625600",
+              "on-primary": "#ffeff3",
+              "primary-container": "#f97bba",
+              "error": "#b41340",
+              "surface-tint": "#9e316d",
+              "tertiary-fixed-dim": "#e5cd27",
+              "primary-fixed-dim": "#e96eac",
+              "surface-dim": "#d1d5d7",
+              "on-tertiary-container": "#584d00",
+              "on-secondary-fixed": "#00483d",
+              "on-secondary": "#c2ffef",
+              "error-container": "#f74b6d",
+              "on-tertiary-fixed": "#433a00",
+              "secondary-container": "#26fedc",
+              "secondary": "#006859",
+              "outline-variant": "#abadae",
+              "on-tertiary": "#fff3bf",
+              "secondary-fixed": "#26fedc",
+              "inverse-on-surface": "#9b9d9e",
+              "on-secondary-fixed-variant": "#006859",
+              "surface-container-highest": "#dadddf",
+              "tertiary-dim": "#5b5000",
+              "secondary-fixed-dim": "#00efce",
+              "on-primary-container": "#530034",
+              "on-error": "#ffefef",
+              "on-background": "#2c2f30",
+              "outline": "#757778",
+              "inverse-primary": "#f97bba",
+              "background": "#f5f6f7"
             },
-        }
+            fontFamily: {
+              "headline": ["Lexend"],
+              "body": ["Plus Jakarta Sans"],
+              "label": ["Plus Jakarta Sans"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
     </script>
 <style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
-        .glass-nav {
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-        }
-        .text-stroke {
-            -webkit-text-stroke: 1px rgba(151, 169, 255, 0.3);
-            color: transparent;
-        }
-        .editorial-grid {
-            display: grid;
-            grid-template-columns: repeat(12, 1fr);
-            gap: 1.5rem;
-        }
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .glass-card {
+        background: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(20px);
+      }
+      .primary-gradient {
+        background: linear-gradient(135deg, #9e316d 0%, #f97bba 100%);
+      }
+      .asymmetric-shadow {
+        box-shadow: 20px 20px 60px #d1d5d7, -20px -20px 60px #ffffff;
+      }
+      .glow-pink {
+        box-shadow: 0px 20px 40px rgba(249, 123, 186, 0.2);
+      }
     </style>
 </head>
-<body class="bg-background text-on-background font-body selection:bg-secondary selection:text-white">
-<!-- TopNavBar -->
-<nav class="fixed top-0 w-full z-50 bg-[#0e0e0f]/60 backdrop-blur-xl shadow-[0_0_24px_rgba(151,169,255,0.1)] flex justify-between items-center px-8 h-20 w-full">
-<div class="text-2xl font-black tracking-[-0.04em] text-white font-headline uppercase">VINYL ARCHIVE</div>
-<div class="hidden md:flex gap-10 items-center">
-<a class="font-headline uppercase tracking-tighter text-[#97a9ff] border-b-2 border-[#97a9ff] pb-1 hover:opacity-80 transition-all duration-300" href="#">Curated</a>
-<a class="font-headline uppercase tracking-tighter text-gray-400 hover:text-white transition-colors hover:opacity-80 transition-all duration-300" href="#">Drops</a>
-<a class="font-headline uppercase tracking-tighter text-gray-400 hover:text-white transition-colors hover:opacity-80 transition-all duration-300" href="#">Vault</a>
+<body class="bg-surface font-body text-on-surface overflow-x-hidden">
+<!-- Hype Bar (Signature Component) -->
+<div class="bg-secondary text-on-secondary py-2 overflow-hidden whitespace-nowrap sticky top-0 z-[60]">
+<div class="inline-block animate-marquee uppercase font-headline font-bold text-xs tracking-widest px-4">
+            NewJeans 'Get Up' Restock Alert • Twice 'With YOU-th' Limited Edition Signed Copies • Free Shipping over $75 • Join the Club for 15% Off • NewJeans 'Get Up' Restock Alert • Twice 'With YOU-th' Limited Edition Signed Copies • Free Shipping over $75
+        </div>
 </div>
-<div class="flex items-center gap-6">
-<button class="active:scale-95 duration-200 hover:opacity-80 transition-all duration-300 text-white">
-<span class="material-symbols-outlined">shopping_bag</span>
-</button>
-<button class="active:scale-95 duration-200 hover:opacity-80 transition-all duration-300 text-white">
-<span class="material-symbols-outlined">person</span>
-</button>
+<!-- TopNavBar -->
+<header class="fixed top-10 w-full z-50 px-6">
+<nav class="bg-white/70 dark:bg-zinc-900/70 backdrop-blur-xl shadow-[0px_20px_40px_rgba(44,47,48,0.06)] rounded-full max-w-7xl mx-auto flex justify-between items-center px-8 py-4">
+<div class="text-2xl font-black tracking-tighter text-[#FF80BF] dark:text-[#f97bba] font-headline">
+                Vinyl Archive
+            </div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-[#FF80BF] font-bold border-b-2 border-[#FF80BF] pb-1 font-label" href="#">Home</a>
+<a class="text-zinc-500 dark:text-zinc-400 font-medium hover:text-[#FF80BF] transition-transform duration-200 ease-out hover:scale-105 font-label" href="#kpop">K-Pop Corner</a>
+<a class="text-zinc-500 dark:text-zinc-400 font-medium hover:text-[#FF80BF] transition-transform duration-200 ease-out hover:scale-105 font-label" href="#merch">Pop Swag</a>
+<a class="text-zinc-500 dark:text-zinc-400 font-medium hover:text-[#FF80BF] transition-transform duration-200 ease-out hover:scale-105 font-label" href="#club">Collector Club</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined p-2 text-on-surface hover:text-primary transition-colors" data-icon="search">search</button>
+<button class="material-symbols-outlined p-2 text-on-surface hover:text-primary transition-colors" data-icon="shopping_cart">shopping_cart</button>
+<button class="md:hidden material-symbols-outlined p-2" data-icon="menu">menu</button>
 </div>
 </nav>
-<main class="pt-20">
-<!-- Hero Section: Trending K-Pop Feature -->
-<section class="relative min-h-[921px] flex items-center overflow-hidden px-8 py-20">
-<div class="absolute inset-0 z-0">
-<div class="absolute inset-0 bg-gradient-to-r from-background via-background/40 to-transparent z-10"></div>
-<img class="w-full h-full object-cover grayscale-[0.2] brightness-50" data-alt="Vibrant neon K-pop concert stage with blue lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKrvDGY4eEI6-SG1H8ZYZQ5quSahTXfCsJl7FuMr3090_3c1YKjoN-VWLILA-MixThJDsN8PdiC6CBDsiQnGZGQWXhz1yj1sSri2YiFqoA7CBXbckKLUdUI8UiDJNY2d6sGI2ORcF0Yd3AJzdKVJ3VtTRKmw69zm6sd4_wtspB9UNKCBEVdlW7HtT569zZD1A6gROQs8y6CgzWEObByU1Qygi6UrAoKuyReoYWk5Xh4egU9rNAbmQVZg918PNSCkG_2IvUzkFKgtqW"/>
-</div>
-<div class="relative z-20 max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-<div class="lg:col-span-7">
-<span class="inline-block px-4 py-1 rounded-full bg-secondary-container text-on-secondary text-xs font-bold tracking-widest uppercase mb-6 shadow-[0_0_15px_rgba(255,107,152,0.4)]">Spotlight Drop</span>
-<h1 class="font-headline text-7xl md:text-9xl font-black tracking-tighter leading-[0.85] mb-8 uppercase">
-                        Neon <br/><span class="text-primary italic">Dreams</span>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center pt-24 px-6 overflow-hidden">
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center w-full">
+<div class="z-10 order-2 lg:order-1">
+<span class="inline-block px-4 py-1 rounded-full bg-tertiary-container text-on-tertiary-container font-headline font-bold text-sm mb-6 uppercase tracking-wider">Now Spinning</span>
+<h1 class="font-headline font-extrabold text-5xl md:text-7xl lg:text-8xl leading-[0.9] text-on-surface tracking-tighter mb-8">
+                        Your Favorite Pop Playlist, <span class="text-primary italic">On Vinyl.</span>
 </h1>
-<p class="text-on-surface-variant max-w-md text-lg font-light leading-relaxed mb-10">
-                        The definitive K-Pop archive has arrived. Limited edition translucent blue pressings of this year's chart-toppers.
+<p class="text-lg md:text-xl text-on-surface-variant max-w-lg mb-10 leading-relaxed">
+                        Experience the tactile magic of K-Pop and Global Pop essentials. High-energy pressings for high-energy fans.
                     </p>
-<div class="flex gap-4">
-<button class="bg-gradient-to-tr from-primary to-primary-container text-on-primary-fixed font-bold py-4 px-10 rounded-full hover:scale-105 transition-transform active:scale-95">
-                            SECURE THE VAULT
+<div class="flex flex-wrap gap-4">
+<button class="primary-gradient text-white px-8 py-4 rounded-full font-headline font-bold text-lg hover:scale-105 transition-transform glow-pink">
+                            Shop New Arrivals
                         </button>
-<button class="border border-outline-variant/20 hover:bg-surface-bright text-white font-bold py-4 px-10 rounded-full transition-colors active:scale-95">
-                            VIEW DETAILS
+<button class="glass-card border border-white/40 text-on-surface px-8 py-4 rounded-full font-headline font-bold text-lg hover:bg-white/90 transition-all">
+                            View Collections
                         </button>
 </div>
 </div>
-<div class="lg:col-span-5 hidden lg:block">
-<div class="relative aspect-square rounded-2xl overflow-hidden shadow-[0_0_60px_rgba(151,169,255,0.2)] group cursor-crosshair">
-<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Modern vinyl record player with blue neon accents" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6vfJaVzu0eobVvDsP9PUc0Iik70NfBcQnNr5JIZrj4gTFv-tGRckW_EL0CVyQp86dd-2Si9gPtcwU4oEsg_Z59i_avn-60vMU1Nw1AKJWy0WSTHCVQoGwjdN5yedTVsgGtuIGPyeAytOBBS-4BBygZjRkET8tysi97RvJMJAy8ZYePK6RE6YQZiN-AXjm_vd1AyzVEuhxhEpw59f2beJioP8rq7SeEo5H_HlEsKK5wJKAF57mD97c4zejfX3MqYrWHel7sceSGhNR"/>
-<div class="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent flex items-end p-8">
-<div>
-<h3 class="font-headline text-2xl font-bold uppercase">Archive Series 01</h3>
-<p class="text-secondary font-bold text-sm tracking-widest uppercase mt-2">Special Edition</p>
-</div>
+<div class="relative order-1 lg:order-2">
+<div class="absolute -top-20 -right-20 w-64 h-64 bg-primary-container rounded-full blur-[100px] opacity-40"></div>
+<div class="absolute -bottom-20 -left-20 w-64 h-64 bg-secondary-container rounded-full blur-[100px] opacity-40"></div>
+<div class="relative z-10 group">
+<img alt="Colorful Pop Vinyl Records Stacked" class="rounded-xl w-full h-[500px] object-cover shadow-2xl transition-transform duration-500 group-hover:rotate-2 scale-105" data-alt="Vibrant aesthetic stack of colorful vinyl records" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7rNyy9v5ylQcpE88rVMptQuQk9LoixLMrXVclDQhYwxVmPFM_7agNJNUKx4Jpk6WsH4rJAskPQDefYRbInzfwWOD_Ge3lVwWMaE2mbcL28Km_AuqZ4SWxEv7-eq1Xo4DsWhtDAq2IlpJlXZ-k5JT-cBU3a1_7kpgA8l7jgBi3Kpbw84sGy04iH_NrII6hyhWTRSNok7tThv_3fqvOGBCC0HkFiL7gPdRQutQr01VByIH2Tv_D1wGRogYTTjqWvrG935-uB4jQDs9t"/>
+<div class="absolute -bottom-6 -right-6 p-6 glass-card rounded-lg border border-white/20 shadow-xl max-w-[200px]">
+<p class="font-headline font-bold text-primary text-xs uppercase mb-1">Featured Release</p>
+<p class="font-bold text-on-surface leading-tight">NewJeans 2nd EP 'Get Up' Bunny Beach Bag Ver.</p>
 </div>
 </div>
 </div>
 </div>
 </section>
-<!-- New Arrivals: Bento Grid Layout -->
-<section class="py-24 px-8 bg-surface-container-low">
+<!-- K-Pop Corner (Bento Grid) -->
+<section class="py-24 px-6 bg-surface-container-low" id="kpop">
 <div class="max-w-7xl mx-auto">
-<div class="flex justify-between items-end mb-16">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
 <div>
-<h2 class="font-headline text-5xl font-black uppercase tracking-tighter">New Arrivals</h2>
-<div class="h-1 w-24 bg-primary mt-4"></div>
+<h2 class="font-headline font-extrabold text-4xl md:text-5xl text-on-surface tracking-tight mb-4">The K-Pop Corner</h2>
+<p class="text-on-surface-variant max-w-md">Limited editions, signed collectibles, and the essentials from Seoul to your turntable.</p>
 </div>
-<a class="text-secondary font-bold uppercase tracking-widest text-xs hover:underline" href="#">Explore All</a>
+<a class="text-primary font-headline font-bold flex items-center gap-2 hover:gap-4 transition-all group" href="#">
+                        View All K-Pop <span class="material-symbols-outlined">arrow_forward</span>
+</a>
 </div>
-<div class="grid grid-cols-1 md:grid-cols-4 grid-rows-2 gap-6 h-auto md:h-[800px]">
-<!-- Large Feature -->
-<div class="md:col-span-2 md:row-span-2 bg-surface-container-highest rounded-2xl overflow-hidden group relative">
-<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Stylish pop artist album cover concept" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC55fAQFjmHz557jIfr2m-9V_kPjIcZLqn1vm-io78VkMYEosidorWPmXTK_COX4ZE1-EBX0FNGRxPnQY8xbcRBvpqVDrmpPYEiizw6XUwejOz_MzU8KVQ0Fqo_LiHN5jZIHvA537S0nPPzQc8HnakELkCr0NOAQnLigiAZIpPRfkGS2qE93jB0NfEAkhQflCphKc0QMY9jst_m3ARw7VvL89gXZfOewXJhxRvPziVBmMNaZXA2CtVGKG1OcnqSR3MXoVDfjypDK_NZ"/>
-<div class="absolute top-6 left-6">
-<span class="bg-primary text-black px-3 py-1 text-[10px] font-black uppercase rounded-full">Trending</span>
+<div class="grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-6 h-auto md:h-[800px]">
+<!-- Large Feature Card -->
+<div class="md:col-span-2 md:row-span-2 bg-surface-container-lowest p-8 rounded-lg flex flex-col justify-between group transition-all hover:bg-white hover:shadow-xl">
+<div>
+<span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-xs font-bold font-headline mb-4 inline-block">TRENDING</span>
+<h3 class="font-headline font-bold text-3xl mb-2">NewJeans Essentials</h3>
+<p class="text-on-surface-variant">Complete your collection with every version of the breakthrough EP.</p>
 </div>
-<div class="absolute inset-x-0 bottom-0 p-8 bg-gradient-to-t from-background via-background/40 to-transparent">
-<h4 class="font-headline text-3xl font-bold uppercase mb-2">Sonic Synthesis</h4>
-<p class="text-on-surface-variant font-medium">Limited Ultra-Blue Vinyl</p>
+<img alt="K-Pop Album Aesthetic" class="w-full h-80 object-cover rounded-lg mt-8 group-hover:scale-[1.02] transition-transform" data-alt="Blue and pink pastel k-pop album aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuASw_V8_Dmv6xJqK7o4nhqZnLRhTp7EThGWfiasmQ0iMtNtA-Q74u3dL2fhbH-zyPlY6hQE6Gl9iVhyZkNHvpoIZQNQ1WCTQQUZNe-LjSvx8tzGseJ2sLu2804QnjfACWi4w7ql05VbW46UNSNGPcDaKaijGJSkjDvRqiCP-SWoH8ay5zqMyRil9pw2EeL4Ik6-BPGBr-V59NFKvRhpYEMfDpSJavwJd5FSib6_9XpRCp6QrfLldDEc-NtYPqT5TcG9bwFSE4yd4Tt6"/>
+<button class="mt-8 text-on-surface font-headline font-bold flex items-center gap-2">Shop Now <span class="material-symbols-outlined">shopping_bag</span></button>
 </div>
-</div>
-<!-- Medium Feature -->
-<div class="md:col-span-2 md:row-span-1 bg-surface-container-highest rounded-2xl overflow-hidden group relative">
-<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Abstract colorful neon light patterns" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHcWp6R3qfHj2vNBiAOQLuMUH4bCsrTIQv6LF4TtU3nXiCKZ6OhYRyIUvO_3wYfAABTbWe4VW6BOQdPtS3cFPsnyDNRXLAmvvs-to3IyTebsTi9-7IfqMrfRUoirzQpmszo7_ftVR7E1kaJELUQPhO6UF5BUQClUMfCllWr2iBmT5TVplG6mPGHOwkunBtVnYrcFhMj_f-CxpnGkXF1tLWszWwUwOGzS5Pyz3I3ctFKD6zU9SxVJeub1FdbUdtX0gvQnsiRehsAKle"/>
-<div class="absolute inset-0 bg-black/40 flex flex-col justify-center items-center text-center p-6">
-<h4 class="font-headline text-2xl font-bold uppercase mb-2">Pop Essentials</h4>
-<p class="text-on-surface-variant text-sm mb-4">The core collection for every digital native.</p>
-<button class="text-secondary text-xs font-bold uppercase tracking-[0.2em] border-b border-secondary pb-1">Shop Collection</button>
-</div>
-</div>
-<!-- Small 1 -->
-<div class="md:col-span-1 md:row-span-1 bg-surface-container-highest rounded-2xl overflow-hidden group relative">
-<img class="w-full h-full object-cover grayscale brightness-75 group-hover:grayscale-0 transition-all duration-500" data-alt="Neon blue vinyl record details" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1LkcX2HC2w4Nv3s6qMlwMgvAPa09W17j4gsvmCr9Fmk2qKzyCoVGBfIIj-vaUjaKnqSixT_j7okYMT80a30ksVDxx294I46yo1OBheAsft0LKLsnzVJhlX6SCbqyG1_5_xyU4D7RIAOzdrY0I9W0y-OWFCjb4GvR5LjnIDHl4ChKyFGghLIiBYvM2tKJvHiCJ2Mhk8mbHBau2DZDdeU4teAWEq2MqssDyXfA1gXmrZLt35SntaOv7gQ2opF-aFQH4VkKZ2v-bOb3D"/>
-<div class="absolute bottom-4 left-4">
-<p class="font-bold text-xs uppercase tracking-tighter">Retro Wave</p>
+<!-- BTS Card -->
+<div class="md:col-span-2 bg-surface-container-lowest p-6 rounded-lg flex gap-6 items-center hover:shadow-lg transition-all">
+<img alt="BTS Vinyl" class="w-32 h-32 md:w-40 md:h-40 object-cover rounded shadow-lg -rotate-3 group-hover:rotate-0 transition-transform" data-alt="Purple BTS themed vinyl record and sleeve" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCicgOshpqv8U8XOWjALYAuq45sYy7GsDybmeFhY_bXJ7pawX6tvTHwKD6pBSobtLBXRLkE6lExu8mKpWTY2a5JwwK1X8xMGyJbceWF8jPlYAeYLec7nGEnnvfwnugtWAKASxT-MrQCuZBFgDcP6bztn56qm-sxZnkuXUbcGNWOLv8bd0vGfqUMls7ZogJmKFiuxA8vZNXIBC7Se9O6BHKVV4Cfqa5ckHpjiY5AT92_RF1lqbs0-msmMLSgGvo1Yc8sCGt85nWL-GyP"/>
+<div>
+<h3 class="font-headline font-bold text-xl mb-1 text-on-surface">BTS: Proof (LP Edition)</h3>
+<p class="text-sm text-on-surface-variant mb-4">The definitive anthology on heavyweight vinyl.</p>
+<p class="font-headline font-bold text-primary">$89.00</p>
 </div>
 </div>
-<!-- Small 2 -->
-<div class="md:col-span-1 md:row-span-1 bg-surface-container-highest rounded-2xl overflow-hidden group relative">
-<div class="w-full h-full bg-surface-bright flex flex-col justify-center p-6">
-<span class="material-symbols-outlined text-primary mb-4" style="font-size: 40px;">auto_awesome</span>
-<h4 class="font-headline text-xl font-bold uppercase mb-2">Mystery Box</h4>
-<p class="text-on-surface-variant text-xs mb-4">3 Curated releases based on your vibe.</p>
-<button class="bg-primary text-black p-2 rounded-full w-fit">
-<span class="material-symbols-outlined">arrow_forward</span>
-</button>
+<!-- Twice Card -->
+<div class="bg-[#FFE5EF] p-6 rounded-lg flex flex-col justify-between hover:shadow-lg transition-all group">
+<img alt="Twice Album" class="w-full aspect-square object-cover rounded-lg mb-4 shadow-md group-hover:-translate-y-2 transition-transform" data-alt="Vibrant pink pop album cover artwork" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUCVzW2yz_FnWtSlC-v1fM4JgV0a-dCWiwF-fci3pIMsQej6wTIPSoMmNI4o89Qj5F9HnrylVDyhM_eiNS5FokzjlLIK_CDdp_BBdU9Dmsxsj0tyizxzSmVxv55h4EeadS6psEihgSPBJPD-xlFU6Z3yTRddukKIzUDtEIJZBM34POIQ5QbsufEXf1WV5rcq_FdhF4bOLlUilluB0Egw2nyR1CLo6tpwkkxFrrOZuZDTJR6kEkg8qq-JyCc0oDFR9wBkKRM8s_qE7F"/>
+<div>
+<h4 class="font-headline font-bold text-lg text-[#9e316d]">Twice: With YOU-th</h4>
+<p class="text-sm font-bold opacity-70">Mint Splash Vinyl</p>
+</div>
+</div>
+<!-- IVE Card -->
+<div class="bg-[#E5F9F6] p-6 rounded-lg flex flex-col justify-between hover:shadow-lg transition-all group">
+<img alt="IVE Album" class="w-full aspect-square object-cover rounded-lg mb-4 shadow-md group-hover:-translate-y-2 transition-transform" data-alt="Modern abstract mint and white music art" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtLeW6SK4_izJd8YbMKr0gF-KrPqIGB9CA0iQoN8YVSMugVBVLkfZ1pRLaHzwjCPNlbJ5_sg68W5vs_1jnaC_Bli_HXcq-kd83Tz2pDr3PPSVUys6YJ5VMEDvG-B41WKUMKP7zBICLTbvB2TqMhdatStaQVQLV925t9Zog_Y0NpLxwdubpZdr-t1q9G1_R6uyc5-gSj5N6WrRas9FYWrXDsi5YTj3i_eD3x6XSH5gvHs8vJbdDXSym_fPuPoLO7pWSbxserxzlzrbG"/>
+<div>
+<h4 class="font-headline font-bold text-lg text-[#006859]">IVE: I've IVE</h4>
+<p class="text-sm font-bold opacity-70">Standard Edition</p>
 </div>
 </div>
 </div>
 </div>
 </section>
-<!-- Merch Section: The Supply -->
-<section class="py-24 px-8 overflow-hidden">
+<!-- Pop Swag (Merch Section) -->
+<section class="py-24 px-6" id="merch">
 <div class="max-w-7xl mx-auto">
-<div class="text-center mb-20">
-<h2 class="font-headline text-6xl md:text-8xl font-black uppercase text-stroke">The Supply</h2>
-<p class="text-on-surface-variant uppercase tracking-[0.3em] text-xs mt-4">Wear the sound. Archive the culture.</p>
+<div class="text-center mb-16">
+<h2 class="font-headline font-extrabold text-4xl md:text-5xl mb-4">Pop Swag</h2>
+<p class="text-on-surface-variant max-w-xl mx-auto">Wear your favorites. Limited edition merch designed in-house for the ultimate fan experience.</p>
 </div>
-<div class="flex flex-col md:flex-row gap-12">
-<div class="flex-1 group">
-<div class="aspect-[3/4] rounded-2xl overflow-hidden bg-surface-container-low mb-6">
-<img class="w-full h-full object-cover mix-blend-screen group-hover:scale-110 transition-transform duration-700" data-alt="Premium oversized black hoodie with minimalist branding" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxsgPGE9UeTG-w63J6kj9TL0dxy_Gb7mXkhEixEUSSskOpFwvLCnubpv2MsglzXj9-HWAGa3W5dWXV3cIcIj90k90pQRE4Yc7Z9EPvRcmaSasdoAv-4XSGzyoHWMaKkUAALiHwXFRPm4jyLps8nPFspqhd-M7xyDTMENsGywZoTnVTA0gL2HzqZETUlvX8gp0raIPF_kLJR9khsPKxsSHpE8nBHPIa9W9i9h9uLssJNUL1yL3m1xX0TxYGqX-ecf3ycNMpnY_He2uq"/>
-</div>
-<div class="flex justify-between items-start">
-<div>
-<h5 class="font-bold uppercase tracking-tight">Archive Heavy Hoodie</h5>
-<p class="text-on-surface-variant text-sm mt-1">Obsidian Black / Heavy Cotton</p>
-</div>
-<p class="font-headline font-bold text-primary">$85</p>
-</div>
-</div>
-<div class="flex-1 group mt-12 md:mt-24">
-<div class="aspect-[3/4] rounded-2xl overflow-hidden bg-surface-container-low mb-6">
-<img class="w-full h-full object-cover mix-blend-lighten group-hover:scale-110 transition-transform duration-700" data-alt="Designer streetwear t-shirt with graphic print" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCz6Aij2z8Ckco1E2qRqVre4YIFowj6qwQLYvMEluDWIDvi2XCsfTPf4WvFouCAzIWEA2A028f_zxzxrMdGw1Vw_Aa0FZ68vQbxdCsyTYWsHI74-SMTfF3dkv_un8VS8nUY7UNVyc36ym4fBBsDBp31CexUGWwCowsDc_8P2GFrpnK_NEZCeoCaeEAyi74VH29rHkMueCG8ecaVMgaRfqwGK8HWS7AMk1MotD7sjqD4ssUVePyUPelDYe3CoI-EQKBk4EKHanR3dDJq"/>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Merch Item 1 -->
+<div class="group">
+<div class="bg-surface-container rounded-xl overflow-hidden mb-6 relative aspect-square">
+<img alt="Limited Tote Bag" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Minimalist heavy canvas tote bag with vinyl print" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbUwJQPKfQdema7N425M-TFh9lIka6NGQLVx72L88rOkpgGcz3c6ODErSaEjr-CsU8Ed2XI2kHR2ut94KXnow2dA6FllBDk_LBtFR1AiMrtx2ToHslyLKJnkizd4JOiWGIPtEXMfFQdIbRCifQnlcsEUsw8AH9FMHOqfqYpCT44bSR-3RNoms3RQ9UhIaug58BbOuKMNkw9P5RdS7vpQ0mHZ_unqcDCn5YksxFFunyxvdwd1PrmJhI_Xt3xLF_H8B-M_o003uJZ_fp"/>
+<div class="absolute top-4 right-4 bg-white px-3 py-1 rounded-full text-xs font-bold font-headline shadow-sm">SOLD OUT</div>
 </div>
 <div class="flex justify-between items-start">
 <div>
-<h5 class="font-bold uppercase tracking-tight">Signal Flow Tee</h5>
-<p class="text-on-surface-variant text-sm mt-1">Vibrant Pink / Boxy Fit</p>
+<h3 class="font-headline font-bold text-xl">"Record Shop" Tote</h3>
+<p class="text-on-surface-variant">Heavy-duty 12oz Canvas</p>
 </div>
-<p class="font-headline font-bold text-primary">$45</p>
+<span class="font-headline font-bold text-lg">$24.00</span>
 </div>
 </div>
-<div class="flex-1 group">
-<div class="aspect-[3/4] rounded-2xl overflow-hidden bg-surface-container-low mb-6">
-<img class="w-full h-full object-cover mix-blend-screen group-hover:scale-110 transition-transform duration-700" data-alt="Minimalist cap with embroidered logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9iBtH8eBS7CT7k5dGEmdEfMIysA5u2h6mqAl1sRIiY8JId7QQcvQxMqtVuFntINw0BKNtfv-E7qOhdXu-hr4lcxbtt-NyJGI7tlH1Q12KA4_YoOMB6ZNvehB4-xEmLOZbJaYI9QkVBBvx3lHNjV-iuaiRbhQqR54ksfQimD8Er9zICc1XoXwqZXt1W8qf7eHwL7vt7RwA8xtShXlb2JErbHekQoGb7Y8z-tpdGjL_R5kDfoOsisDo0rwkYhOIMY975XErUKp1_UvN"/>
+<!-- Merch Item 2 -->
+<div class="group">
+<div class="bg-surface-container rounded-xl overflow-hidden mb-6 relative aspect-square">
+<img alt="Retro Tee" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Pastel pink cotton t-shirt with aesthetic text" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkYHrKrxoRneZno5GrlDw3J-m1JdS2huQjao1KrR02crXU_fxUdnSVF3EV6GIkJMaAusfOdu6wpgpz4hflfheexRSVN9sjWyYueQOhFLkDKVyeQaKalTQq2R-ONiDprPKs8-1hl-zM9aG4idqaMNN-1jfolgkHKU_T-CYARETEfN6QNeeoN39pheruOwaiRNJrLXuYyPhTadquWguMT7JcMDpEKlUa_i7pA60gxVMX6WBIsAQkKO7g3jdGqsqsb00exsDOmRyykA9G"/>
+<div class="absolute bottom-4 left-4 flex gap-2">
+<span class="bg-primary text-white text-[10px] px-2 py-1 rounded-full font-bold">LIMITED</span>
+</div>
 </div>
 <div class="flex justify-between items-start">
 <div>
-<h5 class="font-bold uppercase tracking-tight">VA Icon Snapback</h5>
-<p class="text-on-surface-variant text-sm mt-1">One Size / Electric Blue</p>
+<h3 class="font-headline font-bold text-xl">Vinyl Archive Tee</h3>
+<p class="text-on-surface-variant">Oversized Pastel Pink</p>
 </div>
-<p class="font-headline font-bold text-primary">$35</p>
+<span class="font-headline font-bold text-lg text-primary">$38.00</span>
+</div>
+</div>
+<!-- Merch Item 3 -->
+<div class="group">
+<div class="bg-surface-container rounded-xl overflow-hidden mb-6 relative aspect-square">
+<img alt="Sticker Pack" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Assorted colorful holographic music stickers" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQ9gPAK-370GCyel9YVrFPAUWwNv3oTFEIxabHCfVoVP7WHV9Zrfb03pm2l6ljkWey06jZtPPkzJlCjS07B2Fa3N1lEoAbmD2NyFxR3w1zHRxxAruqkklGV9mtd_Mfz_KDvYUzjQ5IzVzFcBb2MBaz_8Zwz6s-8CWAbW2brXfzBBETfpIQnG843jModDIxiIBnrEShieQbf3y-3titKqELgOOJjnE-PGBJUv9LPieffSVhwXP3q8Iu2aak8dVcGutD8dNEMWoYjzwC"/>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-headline font-bold text-xl">Holo Sticker Pack</h3>
+<p class="text-on-surface-variant">10 Exclusive Designs</p>
+</div>
+<span class="font-headline font-bold text-lg">$12.00</span>
 </div>
 </div>
 </div>
 </div>
 </section>
-<!-- Storytelling Section -->
-<section class="py-32 px-8 bg-surface">
-<div class="max-w-5xl mx-auto">
-<div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-<div class="relative">
-<div class="absolute -top-10 -left-10 w-40 h-40 bg-primary/20 rounded-full blur-3xl"></div>
-<h2 class="font-headline text-5xl md:text-6xl font-black uppercase leading-[0.9] relative z-10">
-                            Preserving <br/>The Analog <br/><span class="text-secondary">Pulse</span>
-</h2>
-<p class="text-on-surface-variant mt-8 leading-relaxed text-lg">
-                            We don't just sell records; we curate the physical frequency of the digital age. In a world of fleeting streams, we're building a tactile fortress for the sounds that define our generation. From Seoul's brightest lights to the indie-pop underground, our mission is to ensure the pulse never fades.
-                        </p>
-<div class="mt-10 flex items-center gap-6">
-<div class="flex flex-col">
-<span class="font-headline text-4xl font-bold text-primary">50k+</span>
-<span class="text-[10px] uppercase tracking-widest text-on-surface-variant">Collectors</span>
+<!-- Story Section -->
+<section class="py-24 px-6" id="club">
+<div class="max-w-7xl mx-auto bg-surface-container-highest rounded-xl p-8 md:p-16 relative overflow-hidden">
+<div class="absolute top-0 right-0 w-1/2 h-full opacity-10 pointer-events-none hidden lg:block">
+<img alt="Background Record" class="w-full h-full object-cover" data-alt="Abstract soft blur of vinyl records" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKE0ckLUoDJyyiSxWJQLLx5IPu98q_uageH3EXtIDtZ2l8Q6G8JpuQO1g0gz0YI2N8JkZmATriB6WEuhh8bJ1XQyATi36RTAwZthuSQ9-pisSM5P06sN832OYF0pTgx-Yk2_oiKAoEMGHGqm4XSa-c27FzwepusblGV6hnygLmgCnFPu_GyqKr8BQrF_0_6sHFZiNvjfBefCHNDsp7Kj86s63QwbncBGsH6bfEP2x3XtOUyiDGAw8gtAXf2olSS0-UxkiFrS5BSFUc"/>
 </div>
-<div class="w-px h-12 bg-outline-variant/30"></div>
-<div class="flex flex-col">
-<span class="font-headline text-4xl font-bold text-primary">12</span>
-<span class="text-[10px] uppercase tracking-widest text-on-surface-variant">Exclusive Drops</span>
+<div class="relative z-10 max-w-2xl">
+<h2 class="font-headline font-extrabold text-4xl md:text-5xl mb-6">Join the Collector Club</h2>
+<p class="text-xl text-on-surface mb-8 leading-relaxed">
+                        We started Vinyl Archive with one goal: to make record collecting as fun and energetic as the music itself. No elitism, just pure pop joy. 
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4 items-center">
+<input class="w-full sm:w-auto flex-1 px-6 py-4 rounded-full border-none bg-white shadow-inner focus:ring-2 focus:ring-primary" placeholder="your@email.com" type="email"/>
+<button class="w-full sm:w-auto bg-inverse-surface text-surface px-8 py-4 rounded-full font-headline font-bold hover:bg-on-surface transition-colors">Join Now</button>
 </div>
-</div>
-</div>
-<div class="relative">
-<div class="aspect-square bg-surface-container-highest rounded-full overflow-hidden border-8 border-surface-container-low shadow-[0_0_80px_rgba(255,107,152,0.1)]">
-<img class="w-full h-full object-cover" data-alt="Macro shot of a vinyl record playing" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAPLix3yON1zNMze3zFcDrX2FUtL71MBuwygewUhHxHX549gChMRCvn_lR0bLSr0hHZAncSxMXbj4Inb0X0hhfib_IQ6oivqf3pbGNNxVWUHuilwWakWceJhwGl5OOGXyzxHIjfYgZz6bdGo8fEZVSJ5j83zlGnWpiZ3dN88hfXfojRR2N19XoTRNeaITj02h3g4BEWvSZf3_iBdLG3Y72j9F5HfSpWPSbIfqB7o472CCqyT9mWZDwlPYnF_56FDabC4oT-i2ZdiX7"/>
-</div>
-<div class="absolute bottom-4 right-4 bg-secondary text-white p-6 rounded-2xl shadow-2xl rotate-3">
-<span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1;">music_note</span>
-</div>
-</div>
+<p class="text-sm mt-4 opacity-60">Members get first access to rare drops &amp; exclusive events.</p>
 </div>
 </div>
 </section>
-<!-- Get In Touch -->
-<section class="py-24 px-8 mb-24">
-<div class="max-w-4xl mx-auto bg-surface-container-high p-12 md:p-20 rounded-[3rem] relative overflow-hidden">
-<div class="absolute top-0 right-0 w-64 h-64 bg-primary/10 rounded-full blur-[100px] -mr-32 -mt-32"></div>
-<div class="relative z-10 text-center">
-<h2 class="font-headline text-4xl md:text-5xl font-bold uppercase mb-4">Join the Collective</h2>
-<p class="text-on-surface-variant mb-12">Be the first to know about secret drops and vault access.</p>
-<form class="flex flex-col md:flex-row gap-4 max-w-lg mx-auto">
-<input class="flex-grow bg-surface-container-highest border-none rounded-full px-8 py-4 text-sm font-bold tracking-widest focus:ring-2 focus:ring-primary transition-all" placeholder="YOUR EMAIL ADDRESS" type="email"/>
-<button class="bg-primary text-black font-black px-10 py-4 rounded-full uppercase tracking-tighter hover:bg-white transition-colors">
-                            JOIN
-                        </button>
+<!-- Contact Section -->
+<section class="py-24 px-6 max-w-4xl mx-auto">
+<div class="text-center mb-12">
+<h2 class="font-headline font-extrabold text-4xl mb-4">Drop us a Note</h2>
+<p class="text-on-surface-variant">Looking for a specific pressing? We can help hunt it down.</p>
+</div>
+<form class="space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="text-xs font-bold font-headline uppercase tracking-widest text-on-surface-variant ml-2">Name</label>
+<input class="w-full px-6 py-4 rounded-lg bg-surface-container-low border-none focus:ring-2 focus:ring-primary" placeholder="Enter your name" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold font-headline uppercase tracking-widest text-on-surface-variant ml-2">Email</label>
+<input class="w-full px-6 py-4 rounded-lg bg-surface-container-low border-none focus:ring-2 focus:ring-primary" placeholder="hello@example.com" type="email"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold font-headline uppercase tracking-widest text-on-surface-variant ml-2">Your Message</label>
+<textarea class="w-full px-6 py-4 rounded-lg bg-surface-container-low border-none focus:ring-2 focus:ring-primary" placeholder="What's on your mind?" rows="4"></textarea>
+</div>
+<button class="w-full bg-[#FF80BF] text-white py-5 rounded-full font-headline font-bold text-xl hover:scale-[1.01] transition-all glow-pink" type="submit">
+                    Send Message
+                </button>
 </form>
-<div class="mt-16 flex justify-center gap-12">
-<a class="text-on-surface-variant hover:text-primary transition-colors uppercase text-[10px] font-black tracking-widest" href="#">Instagram</a>
-<a class="text-on-surface-variant hover:text-primary transition-colors uppercase text-[10px] font-black tracking-widest" href="#">Discord</a>
-<a class="text-on-surface-variant hover:text-primary transition-colors uppercase text-[10px] font-black tracking-widest" href="#">TikTok</a>
-</div>
-</div>
-</div>
 </section>
 </main>
 <!-- Footer -->
-<footer class="bg-[#0e0e0f] w-full py-12 px-8 flex flex-col md:flex-row justify-between items-center gap-6 w-full mt-20">
-<div class="text-[#97a9ff] font-black font-headline text-xl">VINYL ARCHIVE.</div>
-<div class="flex gap-8">
-<a class="font-['Manrope'] text-xs uppercase tracking-[0.1em] text-gray-600 hover:text-white transition-opacity" href="#">Terms</a>
-<a class="font-['Manrope'] text-xs uppercase tracking-[0.1em] text-gray-600 hover:text-white transition-opacity" href="#">Privacy</a>
-<a class="font-['Manrope'] text-xs uppercase tracking-[0.1em] text-gray-600 hover:text-white transition-opacity" href="#">Ethics</a>
-<a class="font-['Manrope'] text-xs uppercase tracking-[0.1em] text-gray-600 hover:text-white transition-opacity" href="#">Contact</a>
+<footer class="w-full rounded-t-[3rem] mt-16 bg-[#eff1f2] dark:bg-zinc-800">
+<div class="flex flex-col md:flex-row justify-between items-start px-12 py-16 gap-8 w-full max-w-7xl mx-auto">
+<div class="flex flex-col gap-6">
+<div class="text-xl font-bold text-[#FF80BF] font-headline">Vinyl Archive</div>
+<p class="text-zinc-600 dark:text-zinc-300 max-w-xs text-sm leading-relaxed">
+                    The ultimate destination for the modern record collector. We believe music should be seen, touched, and experienced.
+                </p>
+<div class="flex gap-4">
+<a class="text-zinc-600 dark:text-zinc-300 hover:text-[#9e316d] transition-colors font-label text-sm" href="#">Instagram</a>
+<a class="text-zinc-600 dark:text-zinc-300 hover:text-[#9e316d] transition-colors font-label text-sm" href="#">TikTok</a>
+<a class="text-zinc-600 dark:text-zinc-300 hover:text-[#9e316d] transition-colors font-label text-sm" href="#">Newsletter</a>
+<a class="text-zinc-600 dark:text-zinc-300 hover:text-[#9e316d] transition-colors font-label text-sm" href="#">Store Hours</a>
 </div>
-<div class="font-['Manrope'] text-xs uppercase tracking-[0.1em] text-gray-600">
-            © 2024 VINYL ARCHIVE. NO-LINE AESTHETIC.
-        </div>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-headline font-bold text-on-surface">Support</h4>
+<ul class="space-y-2 text-sm text-zinc-600 dark:text-zinc-300">
+<li><a class="hover:text-primary" href="#">Shipping &amp; Returns</a></li>
+<li><a class="hover:text-primary" href="#">Grading Guide</a></li>
+<li><a class="hover:text-primary" href="#">Track Order</a></li>
+<li><a class="hover:text-primary" href="#">Privacy Policy</a></li>
+</ul>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-headline font-bold text-on-surface">Store Info</h4>
+<p class="text-sm text-zinc-600 dark:text-zinc-300">
+                    123 Candy Lane<br/>
+                    Pop District, NY 10001<br/>
+                    Mon-Sat: 11am — 8pm
+                </p>
+</div>
+</div>
+<div class="w-full text-center py-8 border-t border-zinc-200/50 dark:border-zinc-700/50">
+<p class="text-xs text-zinc-500 font-medium">© 2024 Vinyl Archive. All rights reserved.</p>
+</div>
 </footer>
-<!-- BottomNavBar (Mobile Only) -->
-<nav class="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center px-6 pb-8 pt-4 bg-[#0e0e0f]/80 backdrop-blur-2xl z-50">
-<button class="flex flex-col items-center justify-center bg-[#97a9ff] text-black rounded-full px-6 py-2 shadow-[0_0_15px_rgba(151,169,255,0.4)] active:scale-90 duration-300 ease-out">
-<span class="material-symbols-outlined">explore</span>
-<span class="font-['Manrope'] text-[10px] font-bold uppercase tracking-widest mt-1">Discover</span>
+<!-- FAB for Cart (Contextual) -->
+<button class="fixed bottom-8 right-8 w-16 h-16 rounded-full primary-gradient text-white flex items-center justify-center shadow-xl hover:scale-110 transition-transform z-40">
+<span class="material-symbols-outlined text-3xl" data-icon="shopping_bag">shopping_bag</span>
 </button>
-<button class="flex flex-col items-center justify-center text-gray-500 hover:text-[#ff6b98] transition-colors active:scale-90 duration-300 ease-out">
-<span class="material-symbols-outlined">library_music</span>
-<span class="font-['Manrope'] text-[10px] font-bold uppercase tracking-widest mt-1">Archive</span>
-</button>
-<button class="flex flex-col items-center justify-center text-gray-500 hover:text-[#ff6b98] transition-colors active:scale-90 duration-300 ease-out">
-<span class="material-symbols-outlined">sensors</span>
-<span class="font-['Manrope'] text-[10px] font-bold uppercase tracking-widest mt-1">Radar</span>
-</button>
-<button class="flex flex-col items-center justify-center text-gray-500 hover:text-[#ff6b98] transition-colors active:scale-90 duration-300 ease-out">
-<span class="material-symbols-outlined">account_circle</span>
-<span class="font-['Manrope'] text-[10px] font-bold uppercase tracking-widest mt-1">Profile</span>
-</button>
-</nav>
 </body></html>
