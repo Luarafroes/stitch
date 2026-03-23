@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800;900&amp;family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "inverse-primary": "#134af1",
+                        "tertiary-container": "#f790e0",
+                        "surface-variant": "#262627",
+                        "on-primary-fixed-variant": "#00207e",
+                        "inverse-on-surface": "#565556",
+                        "secondary-fixed": "#ffc1ce",
+                        "on-secondary-fixed-variant": "#a1004b",
+                        "outline-variant": "#484849",
+                        "on-surface": "#ffffff",
+                        "surface-container-high": "#201f21",
+                        "on-background": "#ffffff",
+                        "tertiary": "#ffa3e9",
+                        "on-surface-variant": "#adaaab",
+                        "secondary-dim": "#e4006c",
+                        "surface-bright": "#2c2c2d",
+                        "tertiary-fixed": "#f790e0",
+                        "on-secondary-fixed": "#6d0030",
+                        "primary-container": "#859aff",
+                        "secondary": "#ff6b98",
+                        "on-secondary-container": "#fff5f6",
+                        "on-secondary": "#47001d",
+                        "surface-container-highest": "#262627",
+                        "on-primary-container": "#001867",
+                        "on-tertiary-container": "#5f0656",
+                        "on-primary": "#002283",
+                        "inverse-surface": "#fcf8f9",
+                        "background": "#0e0e0f",
+                        "error": "#ff6e84",
+                        "on-tertiary-fixed": "#380033",
+                        "primary-fixed": "#859aff",
+                        "secondary-container": "#bb0058",
+                        "primary-fixed-dim": "#718bff",
+                        "on-error-container": "#ffb2b9",
+                        "surface-container": "#19191b",
+                        "surface-tint": "#97a9ff",
+                        "on-tertiary-fixed-variant": "#6a1460",
+                        "surface-dim": "#0e0e0f",
+                        "on-tertiary": "#6c1561",
+                        "surface-container-low": "#131314",
+                        "error-container": "#a70138",
+                        "primary-dim": "#3e65ff",
+                        "tertiary-dim": "#e883d2",
+                        "on-error": "#490013",
+                        "error-dim": "#d73357",
+                        "surface": "#0e0e0f",
+                        "secondary-fixed-dim": "#ffadc0",
+                        "surface-container-lowest": "#000000",
+                        "primary": "#97a9ff",
+                        "tertiary-fixed-dim": "#e883d2",
+                        "outline": "#767576",
+                        "on-primary-fixed": "#000000"
+                    },
+                    fontFamily: {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    },
+                    borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-nav {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .text-stroke {
+            -webkit-text-stroke: 1px rgba(151, 169, 255, 0.3);
+            color: transparent;
+        }
+        .editorial-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 1.5rem;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body selection:bg-secondary selection:text-white">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#0e0e0f]/60 backdrop-blur-xl shadow-[0_0_24px_rgba(151,169,255,0.1)] flex justify-between items-center px-8 h-20 w-full">
+<div class="text-2xl font-black tracking-[-0.04em] text-white font-headline uppercase">VINYL ARCHIVE</div>
+<div class="hidden md:flex gap-10 items-center">
+<a class="font-headline uppercase tracking-tighter text-[#97a9ff] border-b-2 border-[#97a9ff] pb-1 hover:opacity-80 transition-all duration-300" href="#">Curated</a>
+<a class="font-headline uppercase tracking-tighter text-gray-400 hover:text-white transition-colors hover:opacity-80 transition-all duration-300" href="#">Drops</a>
+<a class="font-headline uppercase tracking-tighter text-gray-400 hover:text-white transition-colors hover:opacity-80 transition-all duration-300" href="#">Vault</a>
+</div>
+<div class="flex items-center gap-6">
+<button class="active:scale-95 duration-200 hover:opacity-80 transition-all duration-300 text-white">
+<span class="material-symbols-outlined">shopping_bag</span>
+</button>
+<button class="active:scale-95 duration-200 hover:opacity-80 transition-all duration-300 text-white">
+<span class="material-symbols-outlined">person</span>
+</button>
+</div>
+</nav>
+<main class="pt-20">
+<!-- Hero Section: Trending K-Pop Feature -->
+<section class="relative min-h-[921px] flex items-center overflow-hidden px-8 py-20">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-gradient-to-r from-background via-background/40 to-transparent z-10"></div>
+<img class="w-full h-full object-cover grayscale-[0.2] brightness-50" data-alt="Vibrant neon K-pop concert stage with blue lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKrvDGY4eEI6-SG1H8ZYZQ5quSahTXfCsJl7FuMr3090_3c1YKjoN-VWLILA-MixThJDsN8PdiC6CBDsiQnGZGQWXhz1yj1sSri2YiFqoA7CBXbckKLUdUI8UiDJNY2d6sGI2ORcF0Yd3AJzdKVJ3VtTRKmw69zm6sd4_wtspB9UNKCBEVdlW7HtT569zZD1A6gROQs8y6CgzWEObByU1Qygi6UrAoKuyReoYWk5Xh4egU9rNAbmQVZg918PNSCkG_2IvUzkFKgtqW"/>
+</div>
+<div class="relative z-20 max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+<div class="lg:col-span-7">
+<span class="inline-block px-4 py-1 rounded-full bg-secondary-container text-on-secondary text-xs font-bold tracking-widest uppercase mb-6 shadow-[0_0_15px_rgba(255,107,152,0.4)]">Spotlight Drop</span>
+<h1 class="font-headline text-7xl md:text-9xl font-black tracking-tighter leading-[0.85] mb-8 uppercase">
+                        Neon <br/><span class="text-primary italic">Dreams</span>
+</h1>
+<p class="text-on-surface-variant max-w-md text-lg font-light leading-relaxed mb-10">
+                        The definitive K-Pop archive has arrived. Limited edition translucent blue pressings of this year's chart-toppers.
+                    </p>
+<div class="flex gap-4">
+<button class="bg-gradient-to-tr from-primary to-primary-container text-on-primary-fixed font-bold py-4 px-10 rounded-full hover:scale-105 transition-transform active:scale-95">
+                            SECURE THE VAULT
+                        </button>
+<button class="border border-outline-variant/20 hover:bg-surface-bright text-white font-bold py-4 px-10 rounded-full transition-colors active:scale-95">
+                            VIEW DETAILS
+                        </button>
+</div>
+</div>
+<div class="lg:col-span-5 hidden lg:block">
+<div class="relative aspect-square rounded-2xl overflow-hidden shadow-[0_0_60px_rgba(151,169,255,0.2)] group cursor-crosshair">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Modern vinyl record player with blue neon accents" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6vfJaVzu0eobVvDsP9PUc0Iik70NfBcQnNr5JIZrj4gTFv-tGRckW_EL0CVyQp86dd-2Si9gPtcwU4oEsg_Z59i_avn-60vMU1Nw1AKJWy0WSTHCVQoGwjdN5yedTVsgGtuIGPyeAytOBBS-4BBygZjRkET8tysi97RvJMJAy8ZYePK6RE6YQZiN-AXjm_vd1AyzVEuhxhEpw59f2beJioP8rq7SeEo5H_HlEsKK5wJKAF57mD97c4zejfX3MqYrWHel7sceSGhNR"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent flex items-end p-8">
+<div>
+<h3 class="font-headline text-2xl font-bold uppercase">Archive Series 01</h3>
+<p class="text-secondary font-bold text-sm tracking-widest uppercase mt-2">Special Edition</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- New Arrivals: Bento Grid Layout -->
+<section class="py-24 px-8 bg-surface-container-low">
+<div class="max-w-7xl mx-auto">
+<div class="flex justify-between items-end mb-16">
+<div>
+<h2 class="font-headline text-5xl font-black uppercase tracking-tighter">New Arrivals</h2>
+<div class="h-1 w-24 bg-primary mt-4"></div>
+</div>
+<a class="text-secondary font-bold uppercase tracking-widest text-xs hover:underline" href="#">Explore All</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 grid-rows-2 gap-6 h-auto md:h-[800px]">
+<!-- Large Feature -->
+<div class="md:col-span-2 md:row-span-2 bg-surface-container-highest rounded-2xl overflow-hidden group relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Stylish pop artist album cover concept" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC55fAQFjmHz557jIfr2m-9V_kPjIcZLqn1vm-io78VkMYEosidorWPmXTK_COX4ZE1-EBX0FNGRxPnQY8xbcRBvpqVDrmpPYEiizw6XUwejOz_MzU8KVQ0Fqo_LiHN5jZIHvA537S0nPPzQc8HnakELkCr0NOAQnLigiAZIpPRfkGS2qE93jB0NfEAkhQflCphKc0QMY9jst_m3ARw7VvL89gXZfOewXJhxRvPziVBmMNaZXA2CtVGKG1OcnqSR3MXoVDfjypDK_NZ"/>
+<div class="absolute top-6 left-6">
+<span class="bg-primary text-black px-3 py-1 text-[10px] font-black uppercase rounded-full">Trending</span>
+</div>
+<div class="absolute inset-x-0 bottom-0 p-8 bg-gradient-to-t from-background via-background/40 to-transparent">
+<h4 class="font-headline text-3xl font-bold uppercase mb-2">Sonic Synthesis</h4>
+<p class="text-on-surface-variant font-medium">Limited Ultra-Blue Vinyl</p>
+</div>
+</div>
+<!-- Medium Feature -->
+<div class="md:col-span-2 md:row-span-1 bg-surface-container-highest rounded-2xl overflow-hidden group relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Abstract colorful neon light patterns" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHcWp6R3qfHj2vNBiAOQLuMUH4bCsrTIQv6LF4TtU3nXiCKZ6OhYRyIUvO_3wYfAABTbWe4VW6BOQdPtS3cFPsnyDNRXLAmvvs-to3IyTebsTi9-7IfqMrfRUoirzQpmszo7_ftVR7E1kaJELUQPhO6UF5BUQClUMfCllWr2iBmT5TVplG6mPGHOwkunBtVnYrcFhMj_f-CxpnGkXF1tLWszWwUwOGzS5Pyz3I3ctFKD6zU9SxVJeub1FdbUdtX0gvQnsiRehsAKle"/>
+<div class="absolute inset-0 bg-black/40 flex flex-col justify-center items-center text-center p-6">
+<h4 class="font-headline text-2xl font-bold uppercase mb-2">Pop Essentials</h4>
+<p class="text-on-surface-variant text-sm mb-4">The core collection for every digital native.</p>
+<button class="text-secondary text-xs font-bold uppercase tracking-[0.2em] border-b border-secondary pb-1">Shop Collection</button>
+</div>
+</div>
+<!-- Small 1 -->
+<div class="md:col-span-1 md:row-span-1 bg-surface-container-highest rounded-2xl overflow-hidden group relative">
+<img class="w-full h-full object-cover grayscale brightness-75 group-hover:grayscale-0 transition-all duration-500" data-alt="Neon blue vinyl record details" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1LkcX2HC2w4Nv3s6qMlwMgvAPa09W17j4gsvmCr9Fmk2qKzyCoVGBfIIj-vaUjaKnqSixT_j7okYMT80a30ksVDxx294I46yo1OBheAsft0LKLsnzVJhlX6SCbqyG1_5_xyU4D7RIAOzdrY0I9W0y-OWFCjb4GvR5LjnIDHl4ChKyFGghLIiBYvM2tKJvHiCJ2Mhk8mbHBau2DZDdeU4teAWEq2MqssDyXfA1gXmrZLt35SntaOv7gQ2opF-aFQH4VkKZ2v-bOb3D"/>
+<div class="absolute bottom-4 left-4">
+<p class="font-bold text-xs uppercase tracking-tighter">Retro Wave</p>
+</div>
+</div>
+<!-- Small 2 -->
+<div class="md:col-span-1 md:row-span-1 bg-surface-container-highest rounded-2xl overflow-hidden group relative">
+<div class="w-full h-full bg-surface-bright flex flex-col justify-center p-6">
+<span class="material-symbols-outlined text-primary mb-4" style="font-size: 40px;">auto_awesome</span>
+<h4 class="font-headline text-xl font-bold uppercase mb-2">Mystery Box</h4>
+<p class="text-on-surface-variant text-xs mb-4">3 Curated releases based on your vibe.</p>
+<button class="bg-primary text-black p-2 rounded-full w-fit">
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Merch Section: The Supply -->
+<section class="py-24 px-8 overflow-hidden">
+<div class="max-w-7xl mx-auto">
+<div class="text-center mb-20">
+<h2 class="font-headline text-6xl md:text-8xl font-black uppercase text-stroke">The Supply</h2>
+<p class="text-on-surface-variant uppercase tracking-[0.3em] text-xs mt-4">Wear the sound. Archive the culture.</p>
+</div>
+<div class="flex flex-col md:flex-row gap-12">
+<div class="flex-1 group">
+<div class="aspect-[3/4] rounded-2xl overflow-hidden bg-surface-container-low mb-6">
+<img class="w-full h-full object-cover mix-blend-screen group-hover:scale-110 transition-transform duration-700" data-alt="Premium oversized black hoodie with minimalist branding" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxsgPGE9UeTG-w63J6kj9TL0dxy_Gb7mXkhEixEUSSskOpFwvLCnubpv2MsglzXj9-HWAGa3W5dWXV3cIcIj90k90pQRE4Yc7Z9EPvRcmaSasdoAv-4XSGzyoHWMaKkUAALiHwXFRPm4jyLps8nPFspqhd-M7xyDTMENsGywZoTnVTA0gL2HzqZETUlvX8gp0raIPF_kLJR9khsPKxsSHpE8nBHPIa9W9i9h9uLssJNUL1yL3m1xX0TxYGqX-ecf3ycNMpnY_He2uq"/>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h5 class="font-bold uppercase tracking-tight">Archive Heavy Hoodie</h5>
+<p class="text-on-surface-variant text-sm mt-1">Obsidian Black / Heavy Cotton</p>
+</div>
+<p class="font-headline font-bold text-primary">$85</p>
+</div>
+</div>
+<div class="flex-1 group mt-12 md:mt-24">
+<div class="aspect-[3/4] rounded-2xl overflow-hidden bg-surface-container-low mb-6">
+<img class="w-full h-full object-cover mix-blend-lighten group-hover:scale-110 transition-transform duration-700" data-alt="Designer streetwear t-shirt with graphic print" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCz6Aij2z8Ckco1E2qRqVre4YIFowj6qwQLYvMEluDWIDvi2XCsfTPf4WvFouCAzIWEA2A028f_zxzxrMdGw1Vw_Aa0FZ68vQbxdCsyTYWsHI74-SMTfF3dkv_un8VS8nUY7UNVyc36ym4fBBsDBp31CexUGWwCowsDc_8P2GFrpnK_NEZCeoCaeEAyi74VH29rHkMueCG8ecaVMgaRfqwGK8HWS7AMk1MotD7sjqD4ssUVePyUPelDYe3CoI-EQKBk4EKHanR3dDJq"/>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h5 class="font-bold uppercase tracking-tight">Signal Flow Tee</h5>
+<p class="text-on-surface-variant text-sm mt-1">Vibrant Pink / Boxy Fit</p>
+</div>
+<p class="font-headline font-bold text-primary">$45</p>
+</div>
+</div>
+<div class="flex-1 group">
+<div class="aspect-[3/4] rounded-2xl overflow-hidden bg-surface-container-low mb-6">
+<img class="w-full h-full object-cover mix-blend-screen group-hover:scale-110 transition-transform duration-700" data-alt="Minimalist cap with embroidered logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9iBtH8eBS7CT7k5dGEmdEfMIysA5u2h6mqAl1sRIiY8JId7QQcvQxMqtVuFntINw0BKNtfv-E7qOhdXu-hr4lcxbtt-NyJGI7tlH1Q12KA4_YoOMB6ZNvehB4-xEmLOZbJaYI9QkVBBvx3lHNjV-iuaiRbhQqR54ksfQimD8Er9zICc1XoXwqZXt1W8qf7eHwL7vt7RwA8xtShXlb2JErbHekQoGb7Y8z-tpdGjL_R5kDfoOsisDo0rwkYhOIMY975XErUKp1_UvN"/>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h5 class="font-bold uppercase tracking-tight">VA Icon Snapback</h5>
+<p class="text-on-surface-variant text-sm mt-1">One Size / Electric Blue</p>
+</div>
+<p class="font-headline font-bold text-primary">$35</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Storytelling Section -->
+<section class="py-32 px-8 bg-surface">
+<div class="max-w-5xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+<div class="relative">
+<div class="absolute -top-10 -left-10 w-40 h-40 bg-primary/20 rounded-full blur-3xl"></div>
+<h2 class="font-headline text-5xl md:text-6xl font-black uppercase leading-[0.9] relative z-10">
+                            Preserving <br/>The Analog <br/><span class="text-secondary">Pulse</span>
+</h2>
+<p class="text-on-surface-variant mt-8 leading-relaxed text-lg">
+                            We don't just sell records; we curate the physical frequency of the digital age. In a world of fleeting streams, we're building a tactile fortress for the sounds that define our generation. From Seoul's brightest lights to the indie-pop underground, our mission is to ensure the pulse never fades.
+                        </p>
+<div class="mt-10 flex items-center gap-6">
+<div class="flex flex-col">
+<span class="font-headline text-4xl font-bold text-primary">50k+</span>
+<span class="text-[10px] uppercase tracking-widest text-on-surface-variant">Collectors</span>
+</div>
+<div class="w-px h-12 bg-outline-variant/30"></div>
+<div class="flex flex-col">
+<span class="font-headline text-4xl font-bold text-primary">12</span>
+<span class="text-[10px] uppercase tracking-widest text-on-surface-variant">Exclusive Drops</span>
+</div>
+</div>
+</div>
+<div class="relative">
+<div class="aspect-square bg-surface-container-highest rounded-full overflow-hidden border-8 border-surface-container-low shadow-[0_0_80px_rgba(255,107,152,0.1)]">
+<img class="w-full h-full object-cover" data-alt="Macro shot of a vinyl record playing" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAPLix3yON1zNMze3zFcDrX2FUtL71MBuwygewUhHxHX549gChMRCvn_lR0bLSr0hHZAncSxMXbj4Inb0X0hhfib_IQ6oivqf3pbGNNxVWUHuilwWakWceJhwGl5OOGXyzxHIjfYgZz6bdGo8fEZVSJ5j83zlGnWpiZ3dN88hfXfojRR2N19XoTRNeaITj02h3g4BEWvSZf3_iBdLG3Y72j9F5HfSpWPSbIfqB7o472CCqyT9mWZDwlPYnF_56FDabC4oT-i2ZdiX7"/>
+</div>
+<div class="absolute bottom-4 right-4 bg-secondary text-white p-6 rounded-2xl shadow-2xl rotate-3">
+<span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1;">music_note</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Get In Touch -->
+<section class="py-24 px-8 mb-24">
+<div class="max-w-4xl mx-auto bg-surface-container-high p-12 md:p-20 rounded-[3rem] relative overflow-hidden">
+<div class="absolute top-0 right-0 w-64 h-64 bg-primary/10 rounded-full blur-[100px] -mr-32 -mt-32"></div>
+<div class="relative z-10 text-center">
+<h2 class="font-headline text-4xl md:text-5xl font-bold uppercase mb-4">Join the Collective</h2>
+<p class="text-on-surface-variant mb-12">Be the first to know about secret drops and vault access.</p>
+<form class="flex flex-col md:flex-row gap-4 max-w-lg mx-auto">
+<input class="flex-grow bg-surface-container-highest border-none rounded-full px-8 py-4 text-sm font-bold tracking-widest focus:ring-2 focus:ring-primary transition-all" placeholder="YOUR EMAIL ADDRESS" type="email"/>
+<button class="bg-primary text-black font-black px-10 py-4 rounded-full uppercase tracking-tighter hover:bg-white transition-colors">
+                            JOIN
+                        </button>
+</form>
+<div class="mt-16 flex justify-center gap-12">
+<a class="text-on-surface-variant hover:text-primary transition-colors uppercase text-[10px] font-black tracking-widest" href="#">Instagram</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors uppercase text-[10px] font-black tracking-widest" href="#">Discord</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors uppercase text-[10px] font-black tracking-widest" href="#">TikTok</a>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#0e0e0f] w-full py-12 px-8 flex flex-col md:flex-row justify-between items-center gap-6 w-full mt-20">
+<div class="text-[#97a9ff] font-black font-headline text-xl">VINYL ARCHIVE.</div>
+<div class="flex gap-8">
+<a class="font-['Manrope'] text-xs uppercase tracking-[0.1em] text-gray-600 hover:text-white transition-opacity" href="#">Terms</a>
+<a class="font-['Manrope'] text-xs uppercase tracking-[0.1em] text-gray-600 hover:text-white transition-opacity" href="#">Privacy</a>
+<a class="font-['Manrope'] text-xs uppercase tracking-[0.1em] text-gray-600 hover:text-white transition-opacity" href="#">Ethics</a>
+<a class="font-['Manrope'] text-xs uppercase tracking-[0.1em] text-gray-600 hover:text-white transition-opacity" href="#">Contact</a>
+</div>
+<div class="font-['Manrope'] text-xs uppercase tracking-[0.1em] text-gray-600">
+            © 2024 VINYL ARCHIVE. NO-LINE AESTHETIC.
+        </div>
+</footer>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center px-6 pb-8 pt-4 bg-[#0e0e0f]/80 backdrop-blur-2xl z-50">
+<button class="flex flex-col items-center justify-center bg-[#97a9ff] text-black rounded-full px-6 py-2 shadow-[0_0_15px_rgba(151,169,255,0.4)] active:scale-90 duration-300 ease-out">
+<span class="material-symbols-outlined">explore</span>
+<span class="font-['Manrope'] text-[10px] font-bold uppercase tracking-widest mt-1">Discover</span>
+</button>
+<button class="flex flex-col items-center justify-center text-gray-500 hover:text-[#ff6b98] transition-colors active:scale-90 duration-300 ease-out">
+<span class="material-symbols-outlined">library_music</span>
+<span class="font-['Manrope'] text-[10px] font-bold uppercase tracking-widest mt-1">Archive</span>
+</button>
+<button class="flex flex-col items-center justify-center text-gray-500 hover:text-[#ff6b98] transition-colors active:scale-90 duration-300 ease-out">
+<span class="material-symbols-outlined">sensors</span>
+<span class="font-['Manrope'] text-[10px] font-bold uppercase tracking-widest mt-1">Radar</span>
+</button>
+<button class="flex flex-col items-center justify-center text-gray-500 hover:text-[#ff6b98] transition-colors active:scale-90 duration-300 ease-out">
+<span class="material-symbols-outlined">account_circle</span>
+<span class="font-['Manrope'] text-[10px] font-bold uppercase tracking-widest mt-1">Profile</span>
+</button>
+</nav>
+</body></html>
